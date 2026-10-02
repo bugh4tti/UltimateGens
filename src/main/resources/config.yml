@@ -1,6 +1,7 @@
 # ============================================
 #  UltimateGens - config.yml
 #  Los generadores están en gens.yml
+#  Los mensajes están en messages.yml
 # ============================================
 
 settings:
@@ -11,7 +12,7 @@ settings:
   # Multiplicador global de ventas
   global-multiplier: 1.0
 
-  # Controles (SNEAK_RIGHT, SNEAK_LEFT)
+  # Controles (SNEAK_RIGHT, SNEAK_LEFT, RIGHT, LEFT)
   upgrade-click: SNEAK_RIGHT
   remove-click: SNEAK_LEFT
 
@@ -20,6 +21,10 @@ settings:
 
   # Los gens removidos vuelven al inventario del dueño
   give-back-on-remove: true
+
+  # Los gens se rompen tras esta cantidad de drops y se arreglan pagando
+  # el "Reparar". 0 = desactivado.
+  breaks-after-drops: 0
 
   # Abreviaturas de dinero (1K, 1M, 1B, 1T...)
   number-format:
@@ -77,6 +82,7 @@ item:
 #  Click derecho con el ítem en la mano para activar.
 #  "chance" = probabilidad de que se active (no es 100%).
 #  type: DROP | SPEED | SELL
+#  Placeholders: %multiplier% %time% %chance% %type%
 # ============================================
 boosters:
   drop-x2:
@@ -133,6 +139,9 @@ boosters:
       - ""
       - "&7▲ ¡Click derecho para activar!"
 
+# ============================================
+#  Títulos de los boosters
+# ============================================
 booster-titles:
   activated:
     title: "&#00FF6A¡Booster activado! ⚡"
