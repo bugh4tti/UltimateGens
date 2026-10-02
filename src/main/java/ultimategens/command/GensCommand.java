@@ -1,14 +1,11 @@
 package ultimategens.command;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Locale;
 
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
-import org.bukkit.command.TabCompleter;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.PlayerInventory;
@@ -21,7 +18,7 @@ import ultimategens.manager.GeneratorManager;
 import ultimategens.model.BoosterType;
 import ultimategens.model.GeneratorType;
 
-public class GensCommand implements CommandExecutor, TabCompleter {
+public class GensCommand implements CommandExecutor {
 
     private final UltimateGens plugin;
 
@@ -206,39 +203,4 @@ public class GensCommand implements CommandExecutor, TabCompleter {
             sender.sendMessage(line);
         }
     }
-
-    // ============================================================
-    //  Tab completion
-    // ============================================================
-
-    @Override
-    public List<String> onTabComplete(CommandSender sender, Command command, String alias, String[] args) {
-        List<String> out = new ArrayList<>();
-        boolean admin = sender.hasPermission("ultimategens.admin");
-        String current = args[args.length - 1].toLowerCase(Locale.ROOT);
-
-        if (args.length == 1) {
-            out.add("shop");
-            out.add("sell");
-            if (admin) {
-                out.add("give");
-                out.add("booster");
-                out.add("reload");
-            }
-        } else if (admin && args.length == 2
-                && (args[0].equalsIgnoreCase("give") || args[0].equalsIgnoreCase("booster"))) {
-            for (Player player : Bukkit.getOnlinePlayers()) {
-                out.add(player.getName());
-            }
-        } else if (admin && args.length == 3) {
-            if (args[0].equalsIgnoreCase("give")) {
-                out.addAll(plugin.getGensConfig().getTypes().keySet());
-            } else if (args[0].equalsIgnoreCase("booster")) {
-                out.addAll(plugin.getGensConfig().getBoosters().keySet());
-            }
-        }
-
-        out.removeIf(option -> !option.toLowerCase(Locale.ROOT).startsWith(current));
-        return out;
-    }
-                    }
+                         }
