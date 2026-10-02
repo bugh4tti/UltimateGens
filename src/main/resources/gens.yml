@@ -1,0 +1,186 @@
+# ============================================
+#  UltimateGens - gens.yml
+#  Solo el "starter-generator" (config.yml) se compra.
+#  El resto se obtiene mejorando con agachado + click derecho
+#  (siguiendo el campo "next").
+#  Sin "next" = nivel máximo.
+# ============================================
+generators:
+  trigo:
+    name: "&6Trigo"
+    material: HAY_BLOCK
+    price: 10000
+    interval: 20
+    upgrade-cost: 5000
+    repair-cost: 2500
+    next: melon
+    drops:
+      normal:
+        name: "Trigo"
+        material: WHEAT
+        value: 1250
+      super:
+        name: "Super trigo"
+        material: WHEAT
+        value: 2250
+        chance: 10.0
+
+  melon:
+    name: "&aMelón"
+    material: MELON
+    interval: 20
+    upgrade-cost: 15000
+    repair-cost: 7500
+    next: calabaza
+    drops:
+      normal:
+        name: "Melón"
+        material: MELON_SLICE
+        value: 2500
+      super:
+        name: "Super melón"
+        material: MELON_SLICE
+        value: 3750
+        chance: 10.0
+
+  calabaza:
+    name: "&6Calabaza"
+    material: PUMPKIN
+    interval: 18
+    upgrade-cost: 40000
+    repair-cost: 20000
+    next: carbon
+    drops:
+      normal:
+        name: "Calabaza"
+        material: PUMPKIN
+        value: 6000
+      super:
+        name: "Super calabaza"
+        material: PUMPKIN
+        value: 9000
+        chance: 10.0
+
+  carbon:
+    name: "&8Carbón"
+    material: COAL_BLOCK
+    interval: 16
+    upgrade-cost: 100000
+    repair-cost: 50000
+    next: hierro
+    drops:
+      normal:
+        name: "Carbón"
+        material: COAL
+        value: 14000
+      super:
+        name: "Super carbón"
+        material: COAL
+        value: 21000
+        chance: 10.0
+
+  hierro:
+    name: "&fHierro"
+    material: IRON_BLOCK
+    interval: 14
+    upgrade-cost: 250000
+    repair-cost: 125000
+    next: oro
+    drops:
+      normal:
+        name: "Hierro"
+        material: IRON_INGOT
+        value: 32000
+      super:
+        name: "Super hierro"
+        material: IRON_INGOT
+        value: 48000
+        chance: 10.0
+
+  oro:
+    name: "&eOro"
+    material: GOLD_BLOCK
+    interval: 12
+    upgrade-cost: 600000
+    repair-cost: 300000
+    next: redstone
+    drops:
+      normal:
+        name: "Oro"
+        material: GOLD_INGOT
+        value: 75000
+      super:
+        name: "Super oro"
+        material: GOLD_INGOT
+        value: 110000
+        chance: 10.0
+
+  redstone:
+    name: "&cRedstone"
+    material: REDSTONE_BLOCK
+    interval: 10
+    upgrade-cost: 1500000
+    repair-cost: 750000
+    next: lapislazuli
+    drops:
+      normal:
+        name: "Redstone"
+        material: REDSTONE
+        value: 180000
+      super:
+        name: "Super redstone"
+        material: REDSTONE
+        value: 270000
+        chance: 10.0
+
+  lapislazuli:
+    name: "&9Lapislázuli"
+    material: LAPIS_BLOCK
+    interval: 8
+    upgrade-cost: 4000000
+    repair-cost: 2000000
+    next: diamante
+    drops:
+      normal:
+        name: "Lapislázuli"
+        material: LAPIS_LAZULI
+        value: 450000
+      super:
+        name: "Super lapislázuli"
+        material: LAPIS_LAZULI
+        value: 675000
+        chance: 10.0
+
+  diamante:
+    name: "&bDiamante"
+    material: DIAMOND_BLOCK
+    interval: 6
+    upgrade-cost: 10000000
+    repair-cost: 5000000
+    next: esmeralda
+    drops:
+      normal:
+        name: "Diamante"
+        material: DIAMOND
+        value: 1100000
+      super:
+        name: "Super diamante"
+        material: DIAMOND
+        value: 1650000
+        chance: 10.0
+
+  esmeralda:
+    name: "&2Esmeralda"
+    material: EMERALD_BLOCK
+    interval: 5
+    repair-cost: 12000000
+    drops:
+      normal:
+        name: "Esmeralda"
+        material: EMERALD
+        value: 2800000
+      super:
+        name: "Super esmeralda"
+        material: EMERALD
+        value: 4200000
+        chance: 10.0
