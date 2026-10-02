@@ -5,6 +5,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 import net.milkbowl.vault.economy.Economy;
 import ultimategens.command.GensCommand;
+import ultimategens.command.GensTabCompleter;
 import ultimategens.config.GensConfig;
 import ultimategens.gui.ShopGUI;
 import ultimategens.listener.BoosterListener;
@@ -42,9 +43,8 @@ public class UltimateGens extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new BoosterListener(this), this);
         getServer().getPluginManager().registerEvents(shopGUI, this);
 
-        GensCommand command = new GensCommand(this);
-        getCommand("gens").setExecutor(command);
-        getCommand("gens").setTabCompleter(command);
+        getCommand("gens").setExecutor(new GensCommand(this));
+        getCommand("gens").setTabCompleter(new GensTabCompleter(this));
 
         new DropTask(this).runTaskTimer(this, 20L, 20L);
 
@@ -116,4 +116,4 @@ public class UltimateGens extends JavaPlugin {
     public ShopGUI getShopGUI() {
         return shopGUI;
     }
-  }
+    }
