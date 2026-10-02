@@ -5,6 +5,8 @@ only-players: "&cSolo jugadores pueden usar este comando."
 reloaded: "&aConfiguración recargada."
 unknown-generator: "&cEse generador no existe."
 player-not-found: "&cJugador no encontrado."
+help-give: "&cUso: &f/gens give <jugador> <gen> [cantidad]"
+help-booster: "&cUso: &f/gens booster <jugador> <id> [cantidad]"
 
 economy:
   not-enough-money: "&cNo tenés suficiente dinero. Necesitás &e$%price%&c."
@@ -12,7 +14,7 @@ economy:
 
 shop:
   bought: "&aCompraste el generador %name% &apor &e$%price%&a."
-  inventory-full: "&cTu inventario está lleno."
+  not-buyable: "&cEse generador no se compra. Se consigue mejorando tu generador de trigo."
 
 generator:
   placed: "&aColocaste un generador %name%&a. &7(%current%/%limit%)"
@@ -22,6 +24,10 @@ generator:
   upgraded: "&aMejoraste tu generador a %name% &apor &e$%price%&a."
   max-level: "&cEste generador ya está al nivel máximo."
   upgrade-no-money: "&cNecesitás &e$%price% &cpara mejorar este generador."
+  broken: "&cTu generador %name% &cse rompió. Agachate + click derecho para repararlo."
+  repaired: "&aRepaste tu generador %name% &apor &e$%price%&a."
+  repair-no-money: "&cNecesitás &e$%price% &cpara reparar este generador."
+  given: "&aLe diste &fx%amount% &ageneradores %name% &aa &e%player%&a."
 
 sell:
   sold: "&aVendiste &f%amount% &aítems por &e$%money% &7(x%multiplier%)&a."
@@ -30,6 +36,7 @@ sell:
 booster:
   already-active: "&cYa tenés un booster de %type% activo."
   given: "&aLe diste un booster &f%booster% &aa &e%player%&a."
+  invalid: "&cEse booster no existe."
   expired: "&eTu booster de %type% terminó."
   types:
     DROP: "Drop"
@@ -38,7 +45,7 @@ booster:
 
 help:
   - "&b/gens shop &7- Abre la tienda de generadores"
-  - "&b/gens sell &7- Vende lo que tengas en el inventario"
+  - "&b/gens sell &7- Vende los drops de tu inventario"
   - "&b/gens give <jugador> <gen> [cantidad] &7- Da generadores"
-  - "&b/gens booster <jugador> <id> &7- Da un booster"
+  - "&b/gens booster <jugador> <id> [cantidad] &7- Da un booster"
   - "&b/gens reload &7- Recarga la configuración"
