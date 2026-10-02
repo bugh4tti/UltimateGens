@@ -1,0 +1,24 @@
+name: UltimateGens
+version: ${project.version}
+main: ultimategens.UltimateGens
+api-version: "1.20"
+author: Bughatti
+description: Generadores con mejoras, boosters y venta automática.
+depend: [Vault]
+
+commands:
+  gens:
+    description: Comando principal de UltimateGens
+    aliases: [gen, generadores, ugens]
+    usage: /gens <shop|sell|give|booster|reload>
+
+permissions:
+  ultimategens.use:
+    description: Usar los generadores
+    default: true
+  ultimategens.admin:
+    description: Comandos de administración
+    default: op
+  ultimategens.limit.*:
+    description: Límite de generadores ilimitado
+    default: op
