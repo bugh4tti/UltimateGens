@@ -1,0 +1,154 @@
+# ============================================
+#  UltimateGens - config.yml
+#  Los generadores están en gens.yml
+# ============================================
+
+settings:
+  # Límite por defecto. Para más: permiso ultimategens.limit.<número>
+  default-limit: 10
+  limit-permission-prefix: "ultimategens.limit."
+
+  # Multiplicador global de ventas
+  global-multiplier: 1.0
+
+  # Controles (SNEAK_RIGHT, SNEAK_LEFT)
+  upgrade-click: SNEAK_RIGHT
+  remove-click: SNEAK_LEFT
+
+  # Generador inicial (único comprable)
+  starter-generator: trigo
+
+  # Los gens removidos vuelven al inventario del dueño
+  give-back-on-remove: true
+
+  # Abreviaturas de dinero (1K, 1M, 1B, 1T...)
+  number-format:
+    enabled: true
+    suffixes: ["", "K", "M", "B", "T", "Q"]
+
+# ============================================
+#  Menú de la tienda
+# ============================================
+gui:
+  shop:
+    title: "&0Tienda | Generadores"
+    rows: 5
+    previous-page-slot: 39
+    next-page-slot: 41
+    # Slots donde van los generadores (3 filas de 5)
+    gen-slots: [11,12,13,14,15, 20,21,22,23,24, 29,30,31,32,33]
+    filler:
+      material: GRAY_STAINED_GLASS_PANE
+      name: " "
+    previous-page:
+      material: ARROW
+      name: "&a← Página anterior"
+    next-page:
+      material: ARROW
+      name: "&a→ Siguiente página"
+
+# ============================================
+#  Lore de los generadores
+#  Placeholders: %name% %time% %upgrade% %repair% %drops% %price%
+# ============================================
+item:
+  name: "&fGenerador &8▸ %name%"
+  lore:
+    - "&7Objeto Especial"
+    - ""
+    - "&d✎ Información:"
+    - " &8▪ &fTiempo &e%time% Segundos"
+    - " &8▪ &fMejorar &a$%upgrade%"
+    - " &8▪ &fReparar &c$%repair%"
+    - ""
+    - "&6⚡ Dropeos:"
+    - "%drops%"
+    - ""
+  drop-line: " &8▪ &f%drop% &8(&a$%value%&8)"
+  requirements-lore:
+    - "&c✖ Requisitos:"
+    - " &8▪ &fPrecio &e$%price%"
+    - ""
+  click-buy: "&7▲ ¡Click para comprar!"
+  click-place: "&7▲ ¡Colócalo en el suelo!"
+
+# ============================================
+#  Boosters (estilo UltimateBattlepass)
+#  Click derecho con el ítem en la mano para activar.
+#  "chance" = probabilidad de que se active (no es 100%).
+#  type: DROP | SPEED | SELL
+# ============================================
+boosters:
+  drop-x2:
+    type: DROP
+    multiplier: 2.0
+    duration: 600
+    chance: 75.0
+    material: CHEST_MINECART
+    name: "&#00E5FF&lBooster de Drop &8(&fx2&8)"
+    lore:
+      - "&7Objeto Especial"
+      - ""
+      - "&d✎ Información:"
+      - " &8▪ &fTipo &eDrop"
+      - " &8▪ &fMultiplicador &ax%multiplier%"
+      - " &8▪ &fDuración &e%time%"
+      - " &8▪ &fProbabilidad &a%chance%%"
+      - ""
+      - "&7▲ ¡Click derecho para activar!"
+
+  speed-x2:
+    type: SPEED
+    multiplier: 2.0
+    duration: 600
+    chance: 75.0
+    material: SUGAR
+    name: "&#FFD500&lBooster de Velocidad &8(&fx2&8)"
+    lore:
+      - "&7Objeto Especial"
+      - ""
+      - "&d✎ Información:"
+      - " &8▪ &fTipo &eVelocidad"
+      - " &8▪ &fMultiplicador &ax%multiplier%"
+      - " &8▪ &fDuración &e%time%"
+      - " &8▪ &fProbabilidad &a%chance%%"
+      - ""
+      - "&7▲ ¡Click derecho para activar!"
+
+  sell-x2:
+    type: SELL
+    multiplier: 2.0
+    duration: 600
+    chance: 75.0
+    material: GOLD_NUGGET
+    name: "&#00FF6A&lBooster de Ventas &8(&fx2&8)"
+    lore:
+      - "&7Objeto Especial"
+      - ""
+      - "&d✎ Información:"
+      - " &8▪ &fTipo &eVentas"
+      - " &8▪ &fMultiplicador &ax%multiplier%"
+      - " &8▪ &fDuración &e%time%"
+      - " &8▪ &fProbabilidad &a%chance%%"
+      - ""
+      - "&7▲ ¡Click derecho para activar!"
+
+booster-titles:
+  activated:
+    title: "&#00FF6A¡Booster activado! ⚡"
+    subtitle: "&7x%multiplier% de %type% por &e%time%"
+    fade-in: 10
+    stay: 50
+    fade-out: 10
+  failed:
+    title: "&#FF3B3B¡Booster fallido! ✖"
+    subtitle: "&7No se activó esta vez"
+    fade-in: 10
+    stay: 40
+    fade-out: 10
+  expired:
+    title: "&#FFB300Booster finalizado"
+    subtitle: "&7Tu booster de %type% terminó"
+    fade-in: 10
+    stay: 40
+    fade-out: 10
