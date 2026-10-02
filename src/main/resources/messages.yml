@@ -1,0 +1,44 @@
+prefix: "&8[&bUltimateGens&8] &7"
+
+no-permission: "&cNo tenés permiso para hacer eso."
+only-players: "&cSolo jugadores pueden usar este comando."
+reloaded: "&aConfiguración recargada."
+unknown-generator: "&cEse generador no existe."
+player-not-found: "&cJugador no encontrado."
+
+economy:
+  not-enough-money: "&cNo tenés suficiente dinero. Necesitás &e$%price%&c."
+  no-economy: "&cNo se encontró un plugin de economía."
+
+shop:
+  bought: "&aCompraste el generador %name% &apor &e$%price%&a."
+  inventory-full: "&cTu inventario está lleno."
+
+generator:
+  placed: "&aColocaste un generador %name%&a. &7(%current%/%limit%)"
+  limit-reached: "&cAlcanzaste tu límite de generadores &7(%current%/%limit%)&c."
+  removed: "&eRemoviste tu generador %name%&e."
+  not-owner: "&cEse generador no es tuyo."
+  upgraded: "&aMejoraste tu generador a %name% &apor &e$%price%&a."
+  max-level: "&cEste generador ya está al nivel máximo."
+  upgrade-no-money: "&cNecesitás &e$%price% &cpara mejorar este generador."
+
+sell:
+  sold: "&aVendiste &f%amount% &aítems por &e$%money% &7(x%multiplier%)&a."
+  nothing: "&cNo tenés nada para vender."
+
+booster:
+  already-active: "&cYa tenés un booster de %type% activo."
+  given: "&aLe diste un booster &f%booster% &aa &e%player%&a."
+  expired: "&eTu booster de %type% terminó."
+  types:
+    DROP: "Drop"
+    SPEED: "Velocidad"
+    SELL: "Ventas"
+
+help:
+  - "&b/gens shop &7- Abre la tienda de generadores"
+  - "&b/gens sell &7- Vende lo que tengas en el inventario"
+  - "&b/gens give <jugador> <gen> [cantidad] &7- Da generadores"
+  - "&b/gens booster <jugador> <id> &7- Da un booster"
+  - "&b/gens reload &7- Recarga la configuración"
